@@ -19,10 +19,10 @@
         }
 
         public function get($url, $page) {
+            $obj = new RewriteUrl();
             if($url == '/') {
-//                echo $page;
+                self::$page = $page;
             }else {
-                $obj = new RewriteUrl();
                 return $obj->page_name($url, $page);
             }
         }

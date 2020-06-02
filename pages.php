@@ -3,7 +3,8 @@
 
     $page_name = '';
 /*----------------- Testing ---------------------*/
-    RewriteUrl::get('/', 'home page');
+    RewriteUrl::get('/', 'home.php');
+    RewriteUrl::get('home', 'home.php');
     RewriteUrl::get('test', 'test.php');
     RewriteUrl::get('hello', 'hello.php');
 
