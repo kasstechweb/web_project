@@ -1,5 +1,7 @@
 <?php
     include 'config/constants.php';
+    include 'classes/DB.php';
+
     include 'pages.php';
 	include 'header.php';
 
@@ -11,5 +13,6 @@
 
 //    echo $page_name.'from index';
 
-	include 'footer.php'
+	include 'footer.php';
+$db->close();
 ?>

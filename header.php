@@ -90,13 +90,13 @@
         <nav>
             <ul class="navbar-nav">
                 <li class="nav-item {{ Request::path() ==  '/' ? 'active' : '' }}">
-                    <a href="<?php echo INDEX; ?>"><i class="fas fa-home"></i> Home</a>
+                    <a href="<?php echo INDEX_URL; ?>"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
                     <a href=""><i class="fab fa-hotjar"></i> Top Selling</a>
                 </li>
                 <li class="nav-item {{ Request::path() ==  'category/pc' ? 'active' : ''  }}">
-                    <a href="<?php echo INDEX.'category/pc'; ?>"><i class="fas fa-desktop"></i> PC Games</a>
+                    <a href="<?php echo INDEX_URL.'category/pc'; ?>"><i class="fas fa-desktop"></i> PC Games</a>
                 </li>
                 <li class="nav-item {{ Request::path() ==  'category/playstation' ? 'active' : ''  }}">
                     <a href="{{ url(route('category', ['category'=>'playstation'])) }}"><i class="fab fa-playstation"></i> Playstation Games</a>
@@ -113,3 +113,5 @@
             </ul>
         </nav>
     </header>
+    <main class="container">
+        <!-- load from pages -->
