@@ -3,6 +3,14 @@
     include 'classes/DB.php';
 
     include 'pages.php';
+
+    // CSRF VERIFY
+//    session_start();
+//    if (empty($_SESSION['token'])) {
+//        $_SESSION['token'] = bin2hex(random_bytes(32));
+//    }
+//    $token = $_SESSION['token'];
+//    echo $token;
 	include 'header.php';
 
     if($page_name) {
