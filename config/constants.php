@@ -1,6 +1,7 @@
 <?php
-    define('TITLE', 'GameShop | ');
-    define('ASSETS', 'assets/');
     define('INDEX', 'localhost/web/');
     define('INDEX_URL', 'http://' . INDEX);
+    define('TITLE', 'GameShop | ');
+    define('ASSETS', INDEX_URL . 'assets/');
+
 ?>

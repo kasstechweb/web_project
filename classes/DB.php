@@ -99,6 +99,19 @@ class DB {
         return $result;
     }
 
+    public function error($error) {
+        if ($this->show_errors) {
+            exit($error);
+        }
+    }
+
+    private function _gettype($var) {
+        if (is_string($var)) return 's';
+        if (is_float($var)) return 'd';
+        if (is_int($var)) return 'i';
+        return 'b';
+    }
+
     public function get_connection() {
         if($this->connection){
             return 'good conn';
@@ -110,10 +123,12 @@ class DB {
         return $this->query('SELECT * FROM '. $table)->fetchAll();
     }
 
-    public function get_where($table, $column, $condition) {
-        return $this->query('SELECT * FROM '. $table.' WHERE '. $column .'='. $condition)->fetchArray();
+    public function get_where_first($table, $where, $equal) {
+        return $this->query('SELECT * FROM '. $table.' WHERE '. $where .'=\''. $equal. '\'')->fetchArray();
     }
-
+    public function get_where_all($table, $where, $equal) {
+        return $this->query('SELECT * FROM '. $table.' WHERE '. $where .'=\''. $equal. '\'')->fetchAll();
+    }
     public function close() {
         return $this->connection->close();
     }

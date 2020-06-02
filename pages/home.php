@@ -6,7 +6,7 @@
 
         <?php
             foreach ($games as $game) {
-                $img = $db->get_where('images', 'game_id', $game['id'])
+                $img = $db->get_where_first('images', 'game_id', $game['id']);
         ?>
         <div class="wrapper">
             <div class="card">

@@ -89,26 +89,27 @@
         </div>
         <nav>
             <ul class="navbar-nav">
-                <li class="nav-item {{ Request::path() ==  '/' ? 'active' : '' }}">
+                <?php $page = basename($page_name, '.php'); ?>
+                <li class="nav-item <?php if($page == 'home') echo 'active' ?>">
                     <a href="<?php echo INDEX_URL; ?>"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
                     <a href=""><i class="fab fa-hotjar"></i> Top Selling</a>
                 </li>
-                <li class="nav-item {{ Request::path() ==  'category/pc' ? 'active' : ''  }}">
+                <li class="nav-item <?php if($cat == 'pc') echo 'active'?>">
                     <a href="<?php echo INDEX_URL.'category/pc'; ?>"><i class="fas fa-desktop"></i> PC Games</a>
                 </li>
-                <li class="nav-item {{ Request::path() ==  'category/playstation' ? 'active' : ''  }}">
-                    <a href="{{ url(route('category', ['category'=>'playstation'])) }}"><i class="fab fa-playstation"></i> Playstation Games</a>
+                <li class="nav-item <?php if($cat == 'playstation') echo 'active'?>">
+                    <a href="<?php echo INDEX_URL.'category/playstation'; ?>"><i class="fab fa-playstation"></i> Playstation Games</a>
                 </li>
-                <li class="nav-item {{ Request::path() ==  'category/xbox' ? 'active' : ''  }}">
-                    <a href="{{ url(route('category', ['category'=>'xbox'])) }}"><i class="fab fa-xbox"></i> Xbox Games</a>
+                <li class="nav-item <?php if($cat == 'xbox') echo 'active'?>">
+                    <a href="<?php echo INDEX_URL.'category/xbox'; ?>"><i class="fab fa-xbox"></i> Xbox Games</a>
                 </li>
-                <li class="nav-item {{ Request::path() ==  'category/nintendo' ? 'active' : ''  }}">
-                    <a href="{{ url(route('category', ['category'=>'nintendo'])) }}"><i class="fas fa-magic"></i> Nintendo Games</a>
+                <li class="nav-item <?php if($cat == 'nintendo') echo 'active'?>">
+                    <a href="<?php echo INDEX_URL.'category/nintendo'; ?>"><i class="fas fa-magic"></i> Nintendo Games</a>
                 </li>
-                <li class="nav-item {{ Request::path() ==  'category/giftcards' ? 'active' : ''  }}">
-                    <a href="{{ url(route('category', ['category'=>'giftcards'])) }}"><i class="fas fa-gifts"></i> Gift Cards</a>
+                <li class="nav-item <?php if($cat == 'giftcards') echo 'active'?>">
+                    <a href="<?php echo INDEX_URL.'category/giftcards'; ?>"><i class="fas fa-gifts"></i> Gift Cards</a>
                 </li>
             </ul>
         </nav>
