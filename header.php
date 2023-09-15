@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li class="top-links">
-                    <a class="nav-link" href="{{ route('register') }}">
+                    <a class="nav-link" href="<?php echo INDEX_URL. 'register'; ?>">
                         <i class="fas fa-user-plus"></i>
                         Register
                     </a>

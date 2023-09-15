@@ -16,7 +16,7 @@
                     case $url:
                         // set page in this class tp page name
                         self::$page = $page;
-                        echo $page;
+//                        echo $page;
                         break;
 //                    default:
 //                        header('HTTP/1.1 404 Not Found');
